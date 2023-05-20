@@ -36,7 +36,7 @@ margin:95px 131.62px 98px 131px;
 const PlanetName=styled.h1`
 width:132px;
 height:52px;
-font-family:Spartan;
+font-family: 'Antonio', sans-serif;
 font-weight:400;
 font-size:40px;
 line-height:51.76px;
@@ -44,17 +44,32 @@ align-items:center;
 color:#ffffff;
 margin: 0px 121.5px 16px 121.5px;
 `;
-const PlanetContent=styled.h1`
+const PlanetContent=styled.p`
 width:327px;
-font-family:Spartan;
+height:110px;
+font-family: 'Spartan';
 font-weight:400;
 font-size:11px;
 line-height:22px;
 align-items:center;
 color:#ffffff;
-margin: 0px 24px 32px 24px;
+margin: 0px 24px 0px 24px;
+
+`;
+const Wiki=styled.p`
+width:123px;
+height:25px;
+font-family: 'Spartan';
+font-weight:700;
+font-size:12px;
+line-height:25px;
+/* align-items:center; */
+color:#ffffff;
+Opacity:50%;
+margin: 0px 135px 28px 117px;
+
 
 `;
 
 
-export{Container,OverviewContainer,View,MercuryImg,PlanetName,PlanetContent}
+export{Container,OverviewContainer,View,MercuryImg,PlanetName,PlanetContent,Wiki}
