@@ -1,7 +1,7 @@
 import styled from "styled-components";
 const Container=styled.div`
 width:375px;
-height:950px;
+height:900px;
 background-color:#070724;
 `;
 const OverviewContainer=styled.div`
@@ -67,9 +67,59 @@ line-height:25px;
 color:#ffffff;
 Opacity:50%;
 margin: 0px 135px 28px 117px;
+`;
+const TimeAndTempContainer=styled.div`
+width:327px;
+height:216px;
+margin:0px 24px 47px 24px;
 
+
+
+`;
+const Rotation =styled.div`
+width:327px;
+height:48px;
+mix-blend-mode: normal;
+opacity: 0.2;
+border: 1px solid #FFFFFF;
+display:flex;
+justify-content: space-around;
+align-items: center;
+margin-bottom:8px;
+`;
+const RoTime=styled.p`
+width:80px;
+height:16px;
+font-family: 'Spartan';
+font-weight:700;
+font-size:8px;
+line-height:16px;
+letter-spacing:0.73px;
+text-transform: uppercase;
+align-items:center;
+color:#ffffff;
+mix-blend-mode: normal;
+opacity: 0.5;
+/* padding: 16px 0px 16px 24px; */
+
+
+`;
+const Days=styled.p`
+width:125px;
+height:26px;
+font-family: Antonio;
+font-weight:400;
+font-size:20px;
+line-height:25.88px;
+letter-spacing:-0.75px;
+text-transform: uppercase;
+align-items:right;
+color:#ffffff;
+
+
+/* padding: 9px 24px 13px 0px; */
 
 `;
 
 
-export{Container,OverviewContainer,View,MercuryImg,PlanetName,PlanetContent,Wiki}
+export{Container,OverviewContainer,View,MercuryImg,PlanetName,PlanetContent,Wiki,TimeAndTempContainer,Rotation,RoTime,Days}

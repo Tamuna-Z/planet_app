@@ -8,7 +8,8 @@ import {
   MercuryImg,
   PlanetName,
   PlanetContent,
-  Wiki
+  Wiki,
+  TimeAndTempContainer,Rotation,RoTime,Days
 } from "../styled_components/Planets_styled";
 import Mercury from "../../public/assets/planet-mercury.svg";
 
@@ -22,6 +23,7 @@ function Planet() {
   return (
     <>
       <Container>
+        
         <OverviewContainer>
           <View>OVERVIEW</View>
           <View>STRUCTURE</View>
@@ -34,6 +36,22 @@ function Planet() {
           Source : Wikipedia
         </Wiki>
         <TimeAndTempContainer>
+          <Rotation>
+            <RoTime>ROTATION TIME</RoTime>
+            <Days>{planetInfo.rotation}</Days>
+          </Rotation>
+          <Rotation>
+            <RoTime>Revolution TIME</RoTime>
+            <Days>{planetInfo.revolution}</Days>
+          </Rotation>
+          <Rotation>
+            <RoTime>Radius</RoTime>
+            <Days>{planetInfo.radius}</Days>
+          </Rotation>
+          <Rotation>
+            <RoTime>Average Temp</RoTime>
+            <Days>{planetInfo.temperature}</Days>
+          </Rotation>
 
         </TimeAndTempContainer>
       </Container>
