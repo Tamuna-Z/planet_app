@@ -2,7 +2,7 @@ import styled from "styled-components";
 const Container=styled.div`
 width:375px;
 height:900px;
-background-color:#070724;
+/* background-color:#070724; */
 `;
 const OverviewContainer=styled.div`
 display:flex;
@@ -36,7 +36,7 @@ margin:95px 131.62px 98px 131px;
 const PlanetName=styled.h1`
 width:132px;
 height:52px;
-font-family: 'Antonio', sans-serif;
+font-family: Antonio, sans-serif;
 font-weight:400;
 font-size:40px;
 line-height:51.76px;
@@ -47,7 +47,7 @@ margin: 0px 121.5px 16px 121.5px;
 const PlanetContent=styled.p`
 width:327px;
 height:110px;
-font-family: 'Spartan';
+font-family: Spartan;
 font-weight:400;
 font-size:11px;
 line-height:22px;
@@ -59,7 +59,7 @@ margin: 0px 24px 0px 24px;
 const Wiki=styled.p`
 width:123px;
 height:25px;
-font-family: 'Spartan';
+font-family: Spartan;
 font-weight:700;
 font-size:12px;
 line-height:25px;
@@ -80,8 +80,7 @@ const Rotation =styled.div`
 width:327px;
 height:48px;
 mix-blend-mode: normal;
-opacity: 0.2;
-border: 1px solid #FFFFFF;
+border: 2px solid rgba(255, 255, 255, 0.5);
 display:flex;
 justify-content: space-around;
 align-items: center;
@@ -90,7 +89,7 @@ margin-bottom:8px;
 const RoTime=styled.p`
 width:80px;
 height:16px;
-font-family: 'Spartan';
+font-family: Spartan;
 font-weight:700;
 font-size:8px;
 line-height:16px;

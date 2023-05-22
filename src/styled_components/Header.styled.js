@@ -2,10 +2,12 @@ import styled from "styled-components";
 const HeaderContainer=styled.div`
 /* width:327px; */
 height: 68px;
-background-color:#070724;
+/* background-color:#070724; */
 display:flex;
-justify-content:space-around;
+justify-content:space-between;
 align-items:center;
+padding-left:24px;
+padding-right:24px;
 `;
 const Tittle=styled.h1`
 /* width:109px; */
