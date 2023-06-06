@@ -12,6 +12,7 @@ export const GlobalStyled =createGlobalStyle`
     justify-content:center;
     background-image:url(${bgImage});
     background-size:cover;
+    list-style: none;
   }
   *{
     margin: 0;

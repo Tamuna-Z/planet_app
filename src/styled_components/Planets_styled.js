@@ -14,9 +14,9 @@ border-top:1px solid #fff;
 border-bottom:1px solid #fff;
 `;
 
-const View=styled.h3`
-width:80px;
-height:10px;
+const View=styled.li`
+/* width:80px; */
+/* height:10px; */
 color:#fff;
 font-family:Spartan;
 font-weight:700;
@@ -47,11 +47,11 @@ margin: 0px 121.5px 16px 121.5px;
 const PlanetContent=styled.p`
 width:327px;
 height:110px;
-font-family: Spartan;
+font-family: 'League Spartan', sans-serif;
 font-weight:400;
 font-size:11px;
 line-height:22px;
-align-items:center;
+text-align:center;
 color:#ffffff;
 margin: 0px 24px 0px 24px;
 

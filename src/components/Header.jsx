@@ -1,5 +1,4 @@
 import React from 'react';
-import burgerImg from '../../public/assets/icon-hamburger.svg';
 import {HeaderContainer,Tittle} from '../styled_components/Header.styled';
 import Menu from '../components/Menu';
 import { useState } from 'react';
@@ -13,8 +12,10 @@ function Header() {
     <div>
         {isShown && <Menu />}
         <HeaderContainer>
-        <Tittle>THE PLANETS</Tittle><img src={burgerImg} onClick={toggleMenu}
-        /></HeaderContainer>
+        <Tittle>THE PLANETS</Tittle>
+        <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" width="24" height="17"><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 7h24v3H0zM0 14h24v3H0z"/></g></svg>
+         
+        </HeaderContainer>
     </div>
   )
 }
