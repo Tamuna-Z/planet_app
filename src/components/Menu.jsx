@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   MenuWrapper,
   PlanetNameWrapper,
   MenuPlanetName,
 } from "../styled_components/Menu.styled";
 import PlanetData from "../../data.json";
-import Icon from "../../public/assets/icon-chevron.svg";
+import { Link } from "react-router-dom";
 
 function Menu() {
+  const[planetsMenu,setPlanetsMenu]=useState('Mercury');
   return (
     <>
       <MenuWrapper>
@@ -17,19 +18,22 @@ function Menu() {
               <img />
             </div>
             {PlanetData.map((planet, index) => (
-              <div key={index} index={index}>
-               
+              <Link key={index} to={`/${planet.name.toLowerCase()}`}
+              onClick={()=>{
+                setPlanetsMenu(planet)}}
+                style={planet == planetsMenu ? {backgroundColor:planet.color}: {}}
+              >
                 <div
                   style={{
                     backgroundColor: planet.color,
-                    width: "15px",
-                    height: "15px",
+                    width: "20px",
+                    height: "20px",
                     borderRadius: "50%",
                   }}
-                  
+                 
                 ></div>
                 {planet.name}
-              </div>
+              </Link>
             ))}
           </MenuPlanetName>
         </PlanetNameWrapper>

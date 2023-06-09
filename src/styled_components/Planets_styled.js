@@ -74,7 +74,6 @@ height:216px;
 margin:0px 24px 47px 24px;
 
 
-
 `;
 const Rotation =styled.div`
 width:327px;
@@ -82,7 +81,7 @@ height:48px;
 mix-blend-mode: normal;
 border: 2px solid rgba(255, 255, 255, 0.5);
 display:flex;
-justify-content: space-around;
+justify-content: space-between;
 align-items: center;
 margin-bottom:8px;
 `;

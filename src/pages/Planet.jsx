@@ -23,41 +23,7 @@ function Planet({planetIndex, setPlanetIndex,color, setColor}) {
   const planetNameUpperCase = planetInfo.name.toUpperCase();
 
   const [activeInfo, setActiveInfo] = useState("OVERVIEW");
-  
-
-  // useEffect(() => {
-  //   setActiveInfo("OVERVIEW");
-  //   switch (planetIndex) {
-  //     case 0:
-  //       setColor("#419EBB");
-  //       break;
-  //     case 1:
-  //       setColor("#EDA249");
-  //       break;
-  //     case 2:
-  //       setColor("#6D2ED5");
-  //       break;
-  //     case 3:
-  //       setColor("#D14C32");
-  //       break;
-  //     case 4:
-  //       setColor("#D83A34");
-  //       break;
-  //     case 5:
-  //       setColor("#CD5120");
-  //       break;
-  //     case 6:
-  //       setColor("#1EC1A2");
-  //       break;
-  //     case 7:
-  //       setColor("#2D68F0");
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // }, [planetIndex]);
-
-  
+   
   return (
     <>
       <Container>
