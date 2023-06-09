@@ -9,52 +9,62 @@ import {
   PlanetName,
   PlanetContent,
   Wiki,
-  TimeAndTempContainer,Rotation,RoTime,Days
+  TimeAndTempContainer,
+  Rotation,
+  RoTime,
+  Days,
 } from "../styled_components/Planets_styled";
 import Mercury from "../../public/assets/planet-mercury.svg";
 
-
-function Planet({planetIndex, setPlanetIndex,color, setColor}) {
+function Planet({ planetIndex, setPlanetIndex, color, setColor }) {
   const params = useParams();
-  
+
   const planetInfo = data.find(
     (item) => item.name.toLowerCase() == params.planet
   );
   const planetNameUpperCase = planetInfo.name.toUpperCase();
 
   const [activeInfo, setActiveInfo] = useState("OVERVIEW");
-   
+
   return (
     <>
       <Container>
-        
         <OverviewContainer>
-          <View  style={{
-                borderBottom: `2px solid ${
-                  activeInfo === "OVERVIEW" ? color : "transparent"
-                }`,
-              }}
-              onClick={() => setActiveInfo("OVERVIEW")}>OVERVIEW</View>
-          <View style={{
-                borderBottom: `2px solid ${
-                  activeInfo === "STRUCTURE" ? color : "transparent"
-                }`,
-              }}
-              onClick={() => setActiveInfo("OVERVIEW")}
-          >STRUCTURE</View>
-          <View style={{
-                borderBottom: `2px solid ${
-                  activeInfo === "SURFACE" ? color : "transparent"
-                }`,
-              }}
-              onClick={() => setActiveInfo("OVERVIEW")}>SURFACE</View>
+          <View
+            style={
+              activeInfo === "OVERVIEW"
+                ? { borderBottom: `2px solid ${planetInfo.color}` }
+                : {}
+            }
+            onClick={() => setActiveInfo("OVERVIEW")}
+          >
+            OVERVIEW
+          </View>
+          <View
+            style={
+              activeInfo === "STRUCTURE"
+                ? { borderBottom: `2px solid ${planetInfo.color}` }
+                : {}
+            }
+            onClick={() => setActiveInfo("STRUCTURE")}
+          >
+            STRUCTURE
+          </View>
+          <View
+            style={
+              activeInfo === "SURFACE"
+                ? { borderBottom: `2px solid ${planetInfo.color}` }
+                : {}
+            }
+            onClick={() => setActiveInfo("SURFACE")}
+          >
+            SURFACE
+          </View>
         </OverviewContainer>
         <MercuryImg src={Mercury} />
         <PlanetName>{planetNameUpperCase}</PlanetName>
-        <PlanetContent>{planetInfo.overview.content}</PlanetContent>
-        <Wiki>
-          Source : Wikipedia
-        </Wiki>
+        <PlanetContent>{planetInfo[activeInfo.toLowerCase()].content}</PlanetContent>
+        <Wiki>source:wikipedia{planetInfo[activeInfo.toLowerCase().source]}</Wiki>
         <TimeAndTempContainer>
           <Rotation>
             <RoTime>ROTATION TIME</RoTime>
@@ -72,7 +82,6 @@ function Planet({planetIndex, setPlanetIndex,color, setColor}) {
             <RoTime>Average Temp</RoTime>
             <Days>{planetInfo.temperature}</Days>
           </Rotation>
-
         </TimeAndTempContainer>
       </Container>
     </>
