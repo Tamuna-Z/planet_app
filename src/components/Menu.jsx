@@ -9,6 +9,10 @@ import { Link } from "react-router-dom";
 
 function Menu() {
   const[planetsMenu,setPlanetsMenu]=useState('Mercury');
+  
+  const toggleMenu = () => {
+  props.setIsShown(false);
+};
   return (
     <>
       <MenuWrapper>
@@ -20,8 +24,13 @@ function Menu() {
             {PlanetData.map((planet, index) => (
               <Link key={index} to={`/${planet.name.toLowerCase()}`}
               onClick={()=>{
-                setPlanetsMenu(planet)}}
+                setPlanetsMenu(planet)
+                toggleMenu();
+              }
+              
+              }
                 style={planet == planetsMenu ? {backgroundColor:planet.color}: {}}
+                
               >
                 <div
                   style={{

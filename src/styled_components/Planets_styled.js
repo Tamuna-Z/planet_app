@@ -56,7 +56,7 @@ color:#ffffff;
 margin: 0px 24px 0px 24px;
 
 `;
-const Wiki=styled.p`
+const Wiki=styled.a`
 width:123px;
 height:25px;
 font-family: Spartan;

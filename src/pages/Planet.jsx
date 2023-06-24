@@ -63,8 +63,8 @@ function Planet({ planetIndex, setPlanetIndex, color, setColor }) {
         </OverviewContainer>
         <MercuryImg src={Mercury} />
         <PlanetName>{planetNameUpperCase}</PlanetName>
-        <PlanetContent>{planetInfo[activeInfo.toLowerCase()].content}</PlanetContent>
-        <Wiki>source:wikipedia{planetInfo[activeInfo.toLowerCase().source]}</Wiki>
+        <PlanetContent>{planetInfo[activeInfo.toLowerCase()]?.content}</PlanetContent>
+        <Wiki href={planetInfo[activeInfo.toLowerCase()]?.source}>source:wikipedia</Wiki>
         <TimeAndTempContainer>
           <Rotation>
             <RoTime>ROTATION TIME</RoTime>

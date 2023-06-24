@@ -6,7 +6,7 @@ const MenuWrapper = styled.div`
   color: #fff;
   list-style-type: style none;
   position: absolute;
-  left: 210px;
+  left: 462px;
   top: 70px;
 `;
 
